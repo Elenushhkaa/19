@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int factorize(int n) {
+    int i = 2;
+    while (i * i <= n) {
+        if (n % i == 0) {
+            cout << i << " ";
+            factorize(n / i);
+            return 0;
+        }
+        i += 1;
+    }
+    if (n > 1) cout << n;
+}
+
+int main()
+{
+    int n;
+    cin >> n;
+    factorize(n);
+}
