@@ -1,0 +1,21 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int num;
+int func(int count)
+{
+    if (num/count)
+        func(count*10);
+    count/=10;
+    cout<<num/count<<" ";
+    num%=count;
+    return 0;
+}
+ 
+void main()
+{
+    cin>>num;
+    func(10);
+    cout<<endl;
+}
